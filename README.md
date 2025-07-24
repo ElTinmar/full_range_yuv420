@@ -33,4 +33,11 @@ This project includes a Conda environment file for easy setup:
 
 ```bash
 conda env create -f full_range_yuv420.yml
+```
+
+## Usage
+
+```bash
 conda activate full_range_yuv420
+python set_full_range.py input.avi output_fixed.avi
+```
