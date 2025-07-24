@@ -38,7 +38,7 @@ conda env create -f full_range_yuv420.yml
 ## Usage
 
 ```bash
-$ ffprobe -v error -select_streams v:0 -show_entries stream=color_range input.avi
+$ ffprobe -v error -show_entries stream=color_range input.avi
 [STREAM]
 color_range=unknown
 [/STREAM]
@@ -50,7 +50,7 @@ python set_full_range.py input.avi output_fixed.avi
 ```
 
 ```bash
-$ ffprobe -v error -select_streams v:0 -show_entries stream=color_range output_fixed.avi
+$ ffprobe -v error -show_entries stream=color_range output_fixed.avi
 [STREAM]
 color_range=pc
 [/STREAM]
