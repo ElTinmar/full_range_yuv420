@@ -38,6 +38,16 @@ conda env create -f full_range_yuv420.yml
 ## Usage
 
 ```bash
+ffprobe -v error -select_streams v:0 -show_entries stream=color_range -of default=noprint_wrappers=1:nokey=1 input.avi
+unknown
+```
+
+```bash
 conda activate full_range_yuv420
 python set_full_range.py input.avi output_fixed.avi
+```
+
+```bash
+ffprobe -v error -select_streams v:0 -show_entries stream=color_range -of default=noprint_wrappers=1:nokey=1 output_fixed.avi
+pc
 ```
